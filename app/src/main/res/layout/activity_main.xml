@@ -42,6 +42,20 @@
             android:textColor="#FFFFFF"
             android:layout_marginTop="16dp"/>
 
+        <Button
+            android:id="@+id/policeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nearby Police Stations"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/safetyTipsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Safety Tips"
+            android:layout_marginTop="16dp"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
