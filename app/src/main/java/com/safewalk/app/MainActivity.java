@@ -169,6 +169,26 @@ public class MainActivity extends AppCompatActivity {
 
             transaction.commit();
 
+        Button startButton = findViewById(R.id.startButton);
+        Button emergencyButton = findViewById(R.id.emergencyButton);
+        TextView statusText = findViewById(R.id.statusText);
+
+        // 🔥 TEST 1: check if views are connected
+        if (startButton == null || emergencyButton == null || statusText == null) {
+            Toast.makeText(this, "UI NOT CONNECTED", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        Toast.makeText(this, "UI CONNECTED", Toast.LENGTH_SHORT).show();
+
+        startButton.setOnClickListener(v -> {
+            statusText.setText("Status: Walking Safe Route");
+            Toast.makeText(this, "START CLICKED", Toast.LENGTH_SHORT).show();
+        });
+
+        emergencyButton.setOnClickListener(v -> {
+            statusText.setText("Status: EMERGENCY ALERT!");
+            Toast.makeText(this, "SOS CLICKED", Toast.LENGTH_SHORT).show();
         });
     }
 }
